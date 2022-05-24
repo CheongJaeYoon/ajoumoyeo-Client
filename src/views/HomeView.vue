@@ -1,18 +1,40 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <topBar/>
+    <div v-if="this.$store.state.CurrentPage == 'Board'">
+      <Board/>
+    </div>
+    <div v-if="this.$store.state.CurrentPage == 'Write'">
+      <Write/>
+    </div>
+    <div v-if="this.$store.state.CurrentPage == 'Content'">
+      <Content/>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import TopBar from '@/components/TopBar.vue'
+import Board from '@/components/Board.vue'
+import Write from '@/components/Write.vue'
+import Content from '@/components/Content.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    TopBar,
+    Board,
+    Write,
+    Content
   }
 }
 </script>
+<style scoped>
+.home{
+  background-color: white;
+  width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+}
+</style>
