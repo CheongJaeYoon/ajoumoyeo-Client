@@ -36,5 +36,6 @@ export default {
   width: 1300px;
   height: 100%;
   margin: 0 auto;
+  overflow: scroll;
 }
 </style>

@@ -299,6 +299,7 @@ img{
     justify-content: space-between;
     width: 100px;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 .numButton{
     width:30px;
